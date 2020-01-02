@@ -1,7 +1,9 @@
+import { TimelineDot } from '../timeline.styled';
+
 const TLDot = () => (
-  <div>
-    <h6>P</h6>
-  </div>
+  <TimelineDot>
+    <h6>B</h6>
+  </TimelineDot>
 );
 
 export default TLDot;

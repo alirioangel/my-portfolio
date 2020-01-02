@@ -1,12 +1,17 @@
 import TLBlock from './blocks';
 import TLDot from './dots';
+import { TimelineWrapper, Container } from './timeline.styled';
 
 const Timeline = () => {
   return (
-    <div>
-      <TLBlock></TLBlock>
-      <TLDot></TLDot>
-    </div>
+    <TimelineWrapper>
+      <Container>
+        <TLBlock></TLBlock>
+        <TLBlock></TLBlock>
+        <TLBlock></TLBlock>
+        <TLBlock></TLBlock>
+      </Container>
+    </TimelineWrapper>
   );
 };
 

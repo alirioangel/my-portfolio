@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -597,24 +597,68 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _dots__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dots */ "./Components/timeline/dots/index.jsx");
+/* harmony import */ var _timeline_styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../timeline.styled */ "./Components/timeline/timeline.styled.js");
 var _jsxFileName = "/Users/alirioangel/desarrollos/repositorios/proyectos_personales/my-portfolio/Components/timeline/blocks/index.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const TLBlock = () => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx(_dots__WEBPACK_IMPORTED_MODULE_1__["default"], {
+
+const TLBlock = () => __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_2__["TimelineBlock"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
   },
   __self: undefined
-}));
+}, __jsx(_dots__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}), __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_2__["Card"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_2__["CardContent"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_2__["TimelineTitle"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+}, "Bachillerato en ciencias"), __jsx("div", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx("h6", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, "sub titulo"), __jsx("h6", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, "fecha")), __jsx("p", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptatum dolorem? Dolores enim blanditiis a nobis possimus nesciunt ipsam recusandae adipisci, quis quos alias nisi dolor, placeat, cum obcaecati quam."))));
 
 /* harmony default export */ __webpack_exports__["default"] = (TLBlock);
 
@@ -631,23 +675,25 @@ const TLBlock = () => __jsx("div", {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _timeline_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../timeline.styled */ "./Components/timeline/timeline.styled.js");
 var _jsxFileName = "/Users/alirioangel/desarrollos/repositorios/proyectos_personales/my-portfolio/Components/timeline/dots/index.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const TLDot = () => __jsx("div", {
+
+const TLDot = () => __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_1__["TimelineDot"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 2
+    lineNumber: 4
   },
   __self: undefined
 }, __jsx("h6", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 3
+    lineNumber: 5
   },
   __self: undefined
-}, "P"));
+}, "B"));
 
 /* harmony default export */ __webpack_exports__["default"] = (TLDot);
 
@@ -666,35 +712,107 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks */ "./Components/timeline/blocks/index.jsx");
 /* harmony import */ var _dots__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dots */ "./Components/timeline/dots/index.jsx");
+/* harmony import */ var _timeline_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timeline.styled */ "./Components/timeline/timeline.styled.js");
 var _jsxFileName = "/Users/alirioangel/desarrollos/repositorios/proyectos_personales/my-portfolio/Components/timeline/index.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 const Timeline = () => {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx(_blocks__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_3__["TimelineWrapper"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: undefined
-  }), __jsx(_dots__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_timeline_styled__WEBPACK_IMPORTED_MODULE_3__["Container"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
-  }));
+  }, __jsx(_blocks__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }), __jsx(_blocks__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }), __jsx(_blocks__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }), __jsx(_blocks__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Timeline);
+
+/***/ }),
+
+/***/ "./Components/timeline/timeline.styled.js":
+/*!************************************************!*\
+  !*** ./Components/timeline/timeline.styled.js ***!
+  \************************************************/
+/*! exports provided: Container, TimelineDot, Card, CardContent, TimelineTitle, TimelineBlock, TimelineWrapper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineDot", function() { return TimelineDot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return Card; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardContent", function() { return CardContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineTitle", function() { return TimelineTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineBlock", function() { return TimelineBlock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineWrapper", function() { return TimelineWrapper; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "timelinestyled__Container",
+  componentId: "sc-13u0yyn-0"
+})(["margin:0 auto;@media (min-width:768px){width:750px;}@media (min-width:992px){width:970px;}@media (min-width:1200px){width:1100px;}"]);
+const TimelineDot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "timelinestyled__TimelineDot",
+  componentId: "sc-13u0yyn-1"
+})(["&{background:#06a763;width:50px;height:50px;border-radius:100%;box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);z-index:2;color:#fff;text-align:center;position:absolute;right:47.5%;h6{padding:0;font-size:30px;font-weight:bold;margin-top:8px;text-shadow:2px 2px 4px rgba(0,0,0,0.29);}}"]);
+const Card = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "timelinestyled__Card",
+  componentId: "sc-13u0yyn-2"
+})(["box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);position:relative;margin:8px 0;width:45%;z-index:1;background:", ";position:relative;background:#fff;margin-bottom:5px;border-left:5px solid #1976d2;&:after{clear:both;content:'';display:table;}"], ({
+  theme
+}) => theme.colors.primaryHover);
+const CardContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "timelinestyled__CardContent",
+  componentId: "sc-13u0yyn-3"
+})(["text-align:left;padding:1rem;border-radius:0 0 2px 2px;p{margin:0;color:inherit;text-align:center;}div{margin-bottom:2rem;h6{font-size:1 rem;color:#666;text-align:left;padding:0;margin:0;}}"]);
+const TimelineTitle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h6.withConfig({
+  displayName: "timelinestyled__TimelineTitle",
+  componentId: "sc-13u0yyn-4"
+})(["font-size:1.4rem;margin:0;padding:0;font-weight:normal;"]);
+const TimelineBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "timelinestyled__TimelineBlock",
+  componentId: "sc-13u0yyn-5"
+})(["&{position:relative;}&:after{clear:both;content:'';display:table;}:nth-child(odd) ", "{:before{content:'';width:58px;height:4px;position:absolute;top:26px;left:100%;z-index:-2;opacity:0.4;background:#06a763;}}:nth-child(even) ", "{:before{content:'';width:58px;height:4px;position:absolute;top:26px;left:auto;right:100%;z-index:-2;opacity:0.4;background:#06a763;}"], Card, Card);
+const TimelineWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "timelinestyled__TimelineWrapper",
+  componentId: "sc-13u0yyn-6"
+})(["&{position:relative;}&:before{content:'';position:absolute;top:0;bottom:23px;left:50%;height:99.5%;width:4px;opacity:0.3;background:#06a763;}", ":nth-child(even) ", "{float:right;}"], TimelineBlock, Card);
 
 /***/ }),
 
@@ -6890,7 +7008,7 @@ const Home = () => __jsx("div", {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.jsx ***!
   \*******************************/
