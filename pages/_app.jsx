@@ -1,8 +1,8 @@
-import App from 'next/app';
-import React from 'react';
+import App from './node_modules/next/app';
+import React from './node_modules/react';
 import { GlobalStyles } from '../global';
 import { theme } from '../theme';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from './node_modules/styled-components';
 
 export default class MyApp extends App {
   render() {
@@ -11,7 +11,6 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
-
           <Component {...pageProps} />
         </>
       </ThemeProvider>
