@@ -1,8 +1,8 @@
-import App from './node_modules/next/app';
-import React from './node_modules/react';
+import App from 'next/app';
+import React from 'react';
 import { GlobalStyles } from '../global';
 import { theme } from '../theme';
-import { ThemeProvider } from './node_modules/styled-components';
+import { ThemeProvider } from 'styled-components';
 
 export default class MyApp extends App {
   render() {
