@@ -77,7 +77,7 @@ const Form = () => {
       <h1>
         <ContactMail size="60" /> Contactame y formare parte de tu equipo!
       </h1>
-      <Container>
+      <Container id="contact">
         <FormStyles
           method="POST"
           action="//formspree.io/alirioangelarenas@gmail.com"
@@ -103,7 +103,7 @@ const Form = () => {
             name="_replyto"
             placeholder="name@example.com"
           />
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Mensaje</label>
           <textarea
             required
             value={inputs.message}

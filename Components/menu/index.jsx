@@ -6,9 +6,7 @@ import { Home } from 'styled-icons/icomoon/Home';
 import { UserDetail } from 'styled-icons/boxicons-solid/UserDetail';
 import { GraduationCap } from 'styled-icons/fa-solid/GraduationCap';
 import { Books } from 'styled-icons/icomoon/Books';
-import { Work } from 'styled-icons/material/Work';
 import { Slideshow } from 'styled-icons/remix-fill/Slideshow';
-import { Heart } from 'styled-icons/boxicons-solid/Heart';
 import { ContactMail } from 'styled-icons/material/ContactMail';
 
 const Menu = ({ open, topM }) => {
@@ -59,16 +57,7 @@ const Menu = ({ open, topM }) => {
             </span>
           </Link>
         </li>
-        <li>
-          <Link href="#experience">
-            <span>
-              <i>
-                <Work size="20" />
-              </i>
-              Experiencia
-            </span>
-          </Link>
-        </li>
+
         <li>
           <Link href="#portfolio">
             <span>
@@ -76,16 +65,6 @@ const Menu = ({ open, topM }) => {
                 <Slideshow size="20" />
               </i>
               Portafolio
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link href="#interest">
-            <span>
-              <i>
-                <Heart size="20" />
-              </i>
-              Intereses
             </span>
           </Link>
         </li>
