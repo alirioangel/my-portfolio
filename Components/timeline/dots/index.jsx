@@ -1,8 +1,8 @@
 import { TimelineDot } from '../timeline.styled';
 
-const TLDot = () => (
+const TLDot = props => (
   <TimelineDot>
-    <h6>B</h6>
+    <h6>{props.children}</h6>
   </TimelineDot>
 );
 

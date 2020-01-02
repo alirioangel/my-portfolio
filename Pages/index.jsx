@@ -3,6 +3,7 @@ import Header from '../Containers/header';
 import HomeContainer from '../Containers/home';
 import AboutContainer from '../Containers/about';
 import CurriculumContainer from '../Containers/curriculum';
+import SkillsContainer from '../Containers/skills';
 
 const Home = () => (
   <div>
@@ -10,6 +11,7 @@ const Home = () => (
     <HomeContainer />
     <AboutContainer />
     <CurriculumContainer />
+    <SkillsContainer />
   </div>
 );
 

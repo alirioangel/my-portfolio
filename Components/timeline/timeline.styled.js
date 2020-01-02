@@ -63,7 +63,7 @@ export const CardContent = styled.div`
   p {
     margin: 0;
     color: inherit;
-    text-align: center;
+    text-align: justify;
   }
   div {
     margin-bottom: 2rem;

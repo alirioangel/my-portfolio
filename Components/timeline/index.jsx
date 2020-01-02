@@ -1,15 +1,20 @@
 import TLBlock from './blocks';
-import TLDot from './dots';
 import { TimelineWrapper, Container } from './timeline.styled';
+import { CV } from './cv';
 
 const Timeline = () => {
   return (
     <TimelineWrapper>
       <Container>
-        <TLBlock></TLBlock>
-        <TLBlock></TLBlock>
-        <TLBlock></TLBlock>
-        <TLBlock></TLBlock>
+        {CV.map(item => (
+          <TLBlock
+            title={item.title}
+            dot={item.dot}
+            subtitle={item.subtitle}
+            date={item.date}
+            description={item.description}
+          ></TLBlock>
+        ))}
       </Container>
     </TimelineWrapper>
   );
