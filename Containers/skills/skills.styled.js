@@ -20,6 +20,7 @@ export const Container = styled.div`
   grid-template-rows: repeat(5,1fr);
   grid-gap: 2%;
   background: ${({ theme }) => theme.colors.primaryHover};
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 `;
 
 export const Title = styled.div`

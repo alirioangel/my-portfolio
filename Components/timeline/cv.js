@@ -40,6 +40,6 @@ export const CV = [
     subtitle: ' ',
     date: '09/2017 - actualidad',
     description: ` Desarrollando aplicaciones web bajo las siguientes tecnologias y lenguajes:
-      JavaScript (Vanilla, ES6, React, NodeJS), PHP, MySQL, postgreSQL, mongoDB, Git y github. `,
+      Wordpress, JavaScript (Vanilla, ES6, React, NodeJS), PHP, MySQL, postgreSQL, mongoDB, Git y github. `,
   },
 ];

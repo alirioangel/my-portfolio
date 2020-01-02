@@ -11,6 +11,7 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
+
           <Component {...pageProps} />
         </>
       </ThemeProvider>

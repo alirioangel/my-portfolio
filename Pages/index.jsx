@@ -4,15 +4,19 @@ import HomeContainer from '../Containers/home';
 import AboutContainer from '../Containers/about';
 import CurriculumContainer from '../Containers/curriculum';
 import SkillsContainer from '../Containers/skills';
+import Form from '../Containers/contactme';
+import Footer from '../Containers/footer';
 
 const Home = () => (
-  <div>
+  <>
     <Header />
     <HomeContainer />
     <AboutContainer />
     <CurriculumContainer />
     <SkillsContainer />
-  </div>
+    <Form />
+    <Footer />
+  </>
 );
 
 export default Home;

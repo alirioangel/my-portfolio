@@ -11,9 +11,9 @@ import { Slideshow } from 'styled-icons/remix-fill/Slideshow';
 import { Heart } from 'styled-icons/boxicons-solid/Heart';
 import { ContactMail } from 'styled-icons/material/ContactMail';
 
-const Menu = ({ open }) => {
+const Menu = ({ open, topM }) => {
   return (
-    <StyledMenu open={open}>
+    <StyledMenu topM={topM} open={open}>
       <section>
         <Logo></Logo>
         <h3>Alirio A. Angel A.</h3>

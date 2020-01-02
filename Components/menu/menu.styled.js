@@ -8,7 +8,7 @@ export const StyledMenu = styled.nav`
   min-height: 100vh;
   text-align: left;
   position: absolute;
-  top: 0;
+  top: ${({ topM }) => topM - 7 + 'px'};
   left: 0;
   z-index: 10;
   transform: translateX(-100%);
@@ -21,8 +21,8 @@ export const StyledMenu = styled.nav`
     justify-content: stretch;
     align-items: center;
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     z-index: 10;
     width: 100%;
     color: ${({ theme }) => theme.colors.primaryLight};

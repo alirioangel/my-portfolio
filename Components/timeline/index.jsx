@@ -6,8 +6,9 @@ const Timeline = () => {
   return (
     <TimelineWrapper>
       <Container>
-        {CV.map(item => (
+        {CV.map((item, index) => (
           <TLBlock
+            key={index}
             title={item.title}
             dot={item.dot}
             subtitle={item.subtitle}
