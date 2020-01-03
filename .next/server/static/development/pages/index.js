@@ -1764,58 +1764,82 @@ const HomeContainer = () => __jsx(_home_styled__WEBPACK_IMPORTED_MODULE_1__["Car
     lineNumber: 65
   },
   __self: undefined
-}, __jsx("i", {
+}, __jsx("a", {
+  href: "https://github.com/alirioangel",
+  target: "_blank",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 66
+  },
+  __self: undefined
+}, __jsx("i", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 67
   },
   __self: undefined
 }, __jsx(styled_icons_boxicons_logos_Github__WEBPACK_IMPORTED_MODULE_6__["Github"], {
   size: "20",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 67
+    lineNumber: 68
   },
   __self: undefined
-}))), __jsx(_home_styled__WEBPACK_IMPORTED_MODULE_1__["LinkedInIcon"], {
+})))), __jsx(_home_styled__WEBPACK_IMPORTED_MODULE_1__["LinkedInIcon"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 71
+    lineNumber: 73
+  },
+  __self: undefined
+}, __jsx("a", {
+  href: "https://www.linkedin.com/in/alirioangel/",
+  target: "_blank",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 74
   },
   __self: undefined
 }, __jsx("i", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 72
+    lineNumber: 75
   },
   __self: undefined
 }, __jsx(styled_icons_boxicons_logos_Linkedin__WEBPACK_IMPORTED_MODULE_7__["Linkedin"], {
   size: "20",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 73
+    lineNumber: 76
   },
   __self: undefined
-}))), __jsx(_home_styled__WEBPACK_IMPORTED_MODULE_1__["TwitterIcon"], {
+})))), __jsx(_home_styled__WEBPACK_IMPORTED_MODULE_1__["TwitterIcon"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 77
+    lineNumber: 81
+  },
+  __self: undefined
+}, __jsx("a", {
+  href: "https://twitter.com/_AlirioAngel",
+  target: "_blank",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 82
   },
   __self: undefined
 }, __jsx("i", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 78
+    lineNumber: 83
   },
   __self: undefined
 }, __jsx(styled_icons_boxicons_logos_Twitter__WEBPACK_IMPORTED_MODULE_5__["Twitter"], {
   size: "20",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 79
+    lineNumber: 84
   },
   __self: undefined
-})))))));
+}))))))));
 
 /* harmony default export */ __webpack_exports__["default"] = (HomeContainer);
 

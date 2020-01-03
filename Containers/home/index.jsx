@@ -63,21 +63,27 @@ const HomeContainer = () => (
         </CardContent>
         <SocialBar>
           <GithubIcon>
-            <i>
-              <Github size="20"></Github>
-            </i>
+            <a href="https://github.com/alirioangel" target="_blank">
+              <i>
+                <Github size="20"></Github>
+              </i>
+            </a>
           </GithubIcon>
 
           <LinkedInIcon>
-            <i>
-              <Linkedin size="20"></Linkedin>
-            </i>
+            <a href="https://www.linkedin.com/in/alirioangel/" target="_blank">
+              <i>
+                <Linkedin size="20"></Linkedin>
+              </i>
+            </a>
           </LinkedInIcon>
 
           <TwitterIcon>
-            <i>
-              <Twitter size="20"></Twitter>
-            </i>
+            <a href="https://twitter.com/_AlirioAngel" target="_blank">
+              <i>
+                <Twitter size="20"></Twitter>
+              </i>
+            </a>
           </TwitterIcon>
         </SocialBar>
       </Card>
