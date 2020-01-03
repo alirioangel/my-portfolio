@@ -7,8 +7,11 @@ export const Container = styled.div`
   font-size: 1.5rem;
   margin-left: 3rem;
   margin: 0 auto;
+  background: ${({ theme }) => theme.colors.primaryLight};
+
   @media (min-width: 768px) {
     width: 750px;
+    padding: 0;
   }
 
   @media (min-width: 992px) {
@@ -18,13 +21,17 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     width: 1100px;
   }
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  @media screen and (max-width: 767px) {
+    overflow: visible;
+  }
+
+  box-shadow: ${({ theme }) => theme.boxShadow};
 `;
 export const FormStyles = styled.form`
   display: grid;
   text-align: left;
   justify-content: flex-start;
-
+  padding: 2rem;
   input,
   textarea {
     margin-bottom: 1rem;
@@ -35,13 +42,13 @@ export const FormStyles = styled.form`
     border: 1px solid;
     ::placeholder {
       font-size: 1rem;
-      font-family: 'Rambla';
+      font-family: 'roboto';
     }
   }
   textarea {
     font-size: 1rem;
-    width: 40vw;
-    height: 17vh;
+    width: 30vw;
+    height: auto;
     font-family: 'roboto';
     resize: none;
   }
@@ -59,9 +66,15 @@ export const FormStyles = styled.form`
       box-shadow: 5px 5px 10px rgba(0, 50, 50, 0.5);
     }
   }
-  @media screen and (max-width: 780px) {
-    margin: 0;
-    width: 80%;
+  @media screen and (max-width: 767px) {
+    overflow: visible;
+    margin: 100px 0 0 0;
+    justify-content: center;
+    input,
+    textarea {
+      width: 70vw;
+      padding: 0;
+    }
     h1 {
       font-size: 1.5rem;
     }
@@ -88,6 +101,27 @@ export const Profile = styled.div`
     border-color: rgba(223, 50, 50, 0) transparent transparent
       ${({ theme }) => theme.colors.primaryLight};
   }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    bottom: 85%;
+    top: auto;
+    left: 0;
+    width: 150px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    background-color: transparent;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: ${({ theme }) => theme.boxShadow};
+    }
+    div {
+      display: none;
+    }
+  }
 `;
 export const ErrorMessage = styled.div`
   color: #f22;
@@ -96,4 +130,10 @@ export const ErrorMessage = styled.div`
 export const Message = styled.div`
   color: #04f;
   font-size: 0.8rem;
+`;
+
+export const MainTitle = styled.h1`
+  @media screen and (max-width: 767px) {
+    margin-bottom: 120px;
+  }
 `;

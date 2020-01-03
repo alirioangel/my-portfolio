@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Container, FormStyles, Profile, ErrorMessage, Message } from './contactme.styled';
+import axios from 'axios';
+import {
+  Container,
+  FormStyles,
+  Profile,
+  ErrorMessage,
+  Message,
+  MainTitle,
+} from './contactme.styled';
 import { ContactMail } from 'styled-icons/material/ContactMail';
 
 const Form = () => {
@@ -51,19 +59,11 @@ const Form = () => {
   const handleOnSubmit = e => {
     e.preventDefault();
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
-    const form = e.target;
-    console.log(inputs);
-    console.log(form.method);
-    console.log(form.action);
-    const opt = {
-      method: form.method,
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/mgeodpob',
       data: inputs,
-      dataType: 'json',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-    fetch(form.action, opt)
+    })
       .then(res => {
         console.log(res);
         handleServerResponse(true, 'Gracias por enviar tu mensaje!');
@@ -74,15 +74,11 @@ const Form = () => {
   };
   return (
     <>
-      <h1>
-        <ContactMail size="60" /> Contactame y formare parte de tu equipo!
-      </h1>
+      <MainTitle>
+        <ContactMail size="60" /> Contáctame para formar parte de tu equipo!
+      </MainTitle>
       <Container id="contact">
-        <FormStyles
-          method="POST"
-          action="//formspree.io/alirioangelarenas@gmail.com"
-          onSubmit={handleOnSubmit}
-        >
+        <FormStyles method="POST" onSubmit={handleOnSubmit}>
           <label htmlFor="name">Nombre</label>
           <input
             required
@@ -117,7 +113,7 @@ const Form = () => {
           <button type="submit" disabled={status.submitting}>
             {!status.submitting
               ? !status.submitted
-                ? 'Envia tu mensaje'
+                ? 'Envía tu mensaje'
                 : 'Enviado'
               : 'Enviando, por favor espere..'}
           </button>

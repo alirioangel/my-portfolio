@@ -7,9 +7,13 @@ export const GlobalStyles = createGlobalStyle`
   }
   *, *::after, *::before {
     box-sizing: border-box;
+    outline: none;
+  }
+  button{
+    cursor: pointer;
   }
   body {
-    background: ${({ theme }) => theme.colors.primaryLight};
+    background: ${({ theme }) => theme.colors.backgroundMain};
     color: ${({ theme }) => theme.colors.MainText};
     height: 100vh;
     text-rendering: optimizeLegibility;

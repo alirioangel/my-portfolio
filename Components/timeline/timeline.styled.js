@@ -13,15 +13,18 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     width: 1100px;
   }
+  @media screen and (max-width: 767px) {
+    overflow: visible;
+  }
 `;
 
 export const TimelineDot = styled.div`
   & {
-    background: #06a763;
+    background: ${({ theme }) => theme.colors.someCards};
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: ${({ theme }) => theme.boxShadow};
     z-index: 2;
     color: #fff;
     text-align: center;
@@ -35,10 +38,14 @@ export const TimelineDot = styled.div`
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
     }
   }
+  @media screen and (max-width: 767px) {
+    right: 0;
+    top: auto;
+  }
 `;
 
 export const Card = styled.div`
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   position: relative;
   margin: 8px 0;
   width: 45%;
@@ -53,6 +60,9 @@ export const Card = styled.div`
     clear: both;
     content: '';
     display: table;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 `;
 
@@ -104,7 +114,7 @@ export const TimelineBlock = styled.div`
       left: 100%;
       z-index: -2;
       opacity: 0.4;
-      background: #06a763;
+      background: ${({ theme }) => theme.colors.someCards};
     }
   }
   :nth-child(even) ${Card} {
@@ -118,7 +128,7 @@ export const TimelineBlock = styled.div`
       right: 100%;
       z-index: -2;
       opacity: 0.4;
-      background: #06a763;
+      background: ${({ theme }) => theme.colors.someCards};
     }
 `;
 
@@ -135,7 +145,7 @@ export const TimelineWrapper = styled.div`
     height: 99.5%;
     width: 4px;
     opacity: 0.3;
-    background: #06a763;
+    background: ${({ theme }) => theme.colors.someCards};
   }
   ${TimelineBlock}:nth-child(even) ${Card} {
     float: right;

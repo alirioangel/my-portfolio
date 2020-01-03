@@ -13,7 +13,7 @@ export const CardWrapper = styled.div`
 `;
 
 export const Card = styled.div`
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   position: relative;
   margin: 8px 0;
   width: 100%;
@@ -22,6 +22,12 @@ export const Card = styled.div`
   transition: height 1s, color 1s, margin 1s;
   z-index: 1;
   background: ${({ theme }) => theme.colors.primaryHover};
+  @media screen and (max-width: 767px) {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    z-index: 1;
+  }
 `;
 
 export const Profile = styled.div`
@@ -44,6 +50,31 @@ export const Profile = styled.div`
     border-color: rgba(223, 50, 50, 0) transparent transparent
       ${({ theme }) => theme.colors.primaryHover};
   }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    bottom: 85%;
+    left: 0;
+    width: 150px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    background-color: transparent;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: ${({ theme }) => theme.boxShadow};
+    }
+    div {
+      display: none;
+    }
+  }
+  @media (min-width: 780px) {
+    div {
+      left: -3px;
+    }
+  }
 `;
 
 export const CardContent = styled.div`
@@ -53,6 +84,9 @@ export const CardContent = styled.div`
     margin: 0;
     color: inherit;
     text-align: center;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 20px 0 0 0;
   }
 `;
 export const InfoHeadings = styled.div`
@@ -82,6 +116,15 @@ export const InfoHeadings = styled.div`
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
   }
+
+  @media screen and (max-width: 767px) {
+    h4 {
+      padding: 0 20px;
+    }
+    h6 {
+      padding: 0 20px;
+    }
+  }
 `;
 export const InfoDetails = styled.div`
   display: table;
@@ -106,6 +149,14 @@ export const InfoDetails = styled.div`
           padding-left: 2px;
         }
       }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    ul {
+      padding: 0 20px;
+    }
+    h6 {
+      padding: 0 20px;
     }
   }
 `;
@@ -133,15 +184,26 @@ export const SocialBar = styled.div`
   margin: 40px 0 0 0;
   padding: 30px 0;
   gap: 25px;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 3rem;
+  }
+  @media (min-width: 1200px) {
+    justify-content: center;
+  }
 `;
 const socialIcon = styled.button`
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   width: 50px;
   height: 50px;
   border-radius: 50px;
   border: 0;
   i {
     color: ${({ theme }) => theme.colors.primaryLight};
+  }
+  :hover {
+    opacity: 0.6;
+    transition: 0.6s opacity;
   }
 `;
 

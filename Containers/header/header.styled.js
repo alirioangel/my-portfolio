@@ -4,7 +4,7 @@ export const BackgroundHeader = styled.div`
   position: relative;
   display: block;
   width: 100%;
-  height: 45vh;
+  height: 300px;
   background: url(/images/background-header.jpg) no-repeat;
   background-size: cover;
   background-position: center center;

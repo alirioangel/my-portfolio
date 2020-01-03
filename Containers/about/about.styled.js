@@ -19,7 +19,7 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   color: ${({ theme }) => theme.colors.MainText};
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   background: ${({ theme }) => theme.colors.primaryLight};
   p {
     font-size: 1.2rem;
@@ -31,9 +31,16 @@ export const CardWrapper = styled.div`
 export const Buttons = styled.button`
   background: ${({ theme }) => theme.colors.primaryHover};
   padding: 0.7rem 2rem;
-  margin-right: 15px;
+  margin: 0 15px;
   font-size: 1rem;
-  color: ${({ theme }) => theme.colors.primaryLight};
+  a {
+    color: ${({ theme }) => theme.colors.primaryLight};
+    text-decoration: none;
+  }
   border: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: ${({ theme }) => theme.boxShadow};
+  @media screen and (max-width: 767px) {
+    margin: 10px auto;
+    width: 70vw;
+  }
 `;

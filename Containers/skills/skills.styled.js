@@ -3,8 +3,33 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 0 15px;
   margin: 0 auto;
+  display grid;
+  grid-template-areas: ' professional personal software'
+                      ' text         text     text    ';
+  grid-gap: 2%;
+  background: ${({ theme }) => theme.colors.primaryHover};
+  box-shadow: ${({ theme }) => theme.boxShadow};
+  .personal{
+    margin:0;
+    grid-area: personal;
+  }
+  .professional{
+    margin:0;
+    grid-area: professional;
+  }
+  .software{
+    margin:0;
+    grid-area: software;
+  }
+  .text{
+
+    grid-area: text;
+    margin: -20px 0 50px 0;
+  }
   @media (min-width: 768px) {
     width: 750px;
+ 
+
   }
 
   @media (min-width: 992px) {
@@ -14,13 +39,13 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     width: 1100px;
   }
-  height: 50vh;
-  display grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(5,1fr);
-  grid-gap: 2%;
-  background: ${({ theme }) => theme.colors.primaryHover};
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  @media screen and (max-width: 767px) {
+    grid-row-gap: 30px;
+    grid-template-areas: 'professional'
+    'personal'
+    'software'
+    'text';
+  }
 `;
 
 export const Title = styled.div`
@@ -46,7 +71,7 @@ export const SkillBar = styled.div`
   margin-top: 45px;
   background: ${({ theme }) => theme.colors.primaryFocus};
   height: 4px;
-  margin: 15px 0;
+  margin: 45px 0;
   h5 {
     color: ${({ theme }) => theme.colors.primaryLight};
     font-family: 'Roboto';
@@ -69,4 +94,11 @@ export const SkillBar = styled.div`
     position: absolute;
     top: 0;
   }
+`;
+export const TextSkills = styled.p`
+  color: ${({ theme }) => theme.colors.primaryLight};
+  font-size: 1rem;
+  text-align:justify;
+  padding: 0 2rem;
+  margin 0 auto;
 `;

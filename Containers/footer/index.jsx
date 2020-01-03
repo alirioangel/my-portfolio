@@ -12,9 +12,10 @@ const FooterStyles = styled.footer`
   font-size: 1rem;
   flex-direction: column;
   p {
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
     @media screen and (max-width: 600px) {
-      margin: 2rem 2rem 0 2rem;
+      margin: 0;
     }
   }
   a {
