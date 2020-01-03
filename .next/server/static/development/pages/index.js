@@ -252,7 +252,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const Menu = ({
   open,
-  topM
+  topM,
+  setOpen
 }) => {
   return __jsx(_menu_styled__WEBPACK_IMPORTED_MODULE_1__["StyledMenu"], {
     topM: topM,
@@ -287,6 +288,7 @@ const Menu = ({
     },
     __self: undefined
   }, __jsx("li", {
+    onClick: () => setOpen(!open),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -319,6 +321,7 @@ const Menu = ({
     },
     __self: undefined
   })), "Inicio"))), __jsx("li", {
+    onClick: () => setOpen(!open),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -351,6 +354,7 @@ const Menu = ({
     },
     __self: undefined
   })), "Sobre mi"))), __jsx("li", {
+    onClick: () => setOpen(!open),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
@@ -383,6 +387,7 @@ const Menu = ({
     },
     __self: undefined
   })), "Educacion"))), __jsx("li", {
+    onClick: () => setOpen(!open),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
@@ -415,6 +420,7 @@ const Menu = ({
     },
     __self: undefined
   })), "Habilidades"))), __jsx("li", {
+    onClick: () => setOpen(!open),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
@@ -447,6 +453,7 @@ const Menu = ({
     },
     __self: undefined
   })), "Portafolio"))), __jsx("li", {
+    onClick: () => setOpen(!open),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
@@ -1395,41 +1402,46 @@ const BackgroundHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Components_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Components/menu */ "./Components/menu/index.jsx");
-/* harmony import */ var _Components_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/burger */ "./Components/burger/index.jsx");
-/* harmony import */ var _header_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header.styled */ "./Containers/header/header.styled.js");
+/* harmony import */ var _utils_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/hooks */ "./utils/hooks.js");
+/* harmony import */ var _Components_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/menu */ "./Components/menu/index.jsx");
+/* harmony import */ var _Components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/burger */ "./Components/burger/index.jsx");
+/* harmony import */ var _header_styled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header.styled */ "./Containers/header/header.styled.js");
 var _jsxFileName = "/Users/alirioangel/desarrollos/repositorios/proyectos_personales/my-portfolio/Containers/header/index.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
 
 
 const Header = props => {
-  const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](false);
+  const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
+  const node = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  Object(_utils_hooks__WEBPACK_IMPORTED_MODULE_1__["useOnClickOutside"])(node, () => setOpen(false));
   const topM = TopMove();
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_3__["BackgroundHeader"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_4__["BackgroundHeader"], {
+    ref: node,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: undefined
-  }, __jsx(_Components_burger__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_Components_burger__WEBPACK_IMPORTED_MODULE_3__["default"], {
     topM: topM,
     open: open,
     setOpen: setOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: undefined
-  }), __jsx(_Components_menu__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), __jsx(_Components_menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
     topM: topM,
     open: open,
     setOpen: setOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: undefined
   })), props.children);
@@ -1437,7 +1449,7 @@ const Header = props => {
 
 const TopMove = () => {
   const client = false;
-  const [topM, setTopM] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](7);
+  const [topM, setTopM] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(7);
 
   const HandleTop = () => {
     const body = document.getElementById('__next');
@@ -1445,7 +1457,7 @@ const TopMove = () => {
     setTopM(topm);
   };
 
-  react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](() => {
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
     const body = document.getElementById('__next');
 
     if (client) {
@@ -4492,6 +4504,38 @@ const Home = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, _
 }));
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./utils/hooks.js":
+/*!************************!*\
+  !*** ./utils/hooks.js ***!
+  \************************/
+/*! exports provided: useOnClickOutside */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useOnClickOutside", function() { return useOnClickOutside; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const useOnClickOutside = (ref, handler) => {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    const listener = event => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+
+      handler(event);
+    };
+
+    document.addEventListener('mousedown', listener);
+    return () => {
+      document.removeEventListener('mousedown', listener);
+    };
+  }, [ref, handler]);
+};
 
 /***/ }),
 

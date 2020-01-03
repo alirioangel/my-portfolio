@@ -161,7 +161,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var Menu = function Menu(_ref) {
   var open = _ref.open,
-      topM = _ref.topM;
+      topM = _ref.topM,
+      setOpen = _ref.setOpen;
   return __jsx(_menu_styled__WEBPACK_IMPORTED_MODULE_1__["StyledMenu"], {
     topM: topM,
     open: open,
@@ -195,6 +196,9 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   }, __jsx("li", {
+    onClick: function onClick() {
+      return setOpen(!open);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -227,6 +231,9 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   })), "Inicio"))), __jsx("li", {
+    onClick: function onClick() {
+      return setOpen(!open);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -259,6 +266,9 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   })), "Sobre mi"))), __jsx("li", {
+    onClick: function onClick() {
+      return setOpen(!open);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
@@ -291,6 +301,9 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   })), "Educacion"))), __jsx("li", {
+    onClick: function onClick() {
+      return setOpen(!open);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
@@ -323,6 +336,9 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   })), "Habilidades"))), __jsx("li", {
+    onClick: function onClick() {
+      return setOpen(!open);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
@@ -355,6 +371,9 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   })), "Portafolio"))), __jsx("li", {
+    onClick: function onClick() {
+      return setOpen(!open);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
@@ -1331,46 +1350,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Components_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/menu */ "./Components/menu/index.jsx");
-/* harmony import */ var _Components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/burger */ "./Components/burger/index.jsx");
-/* harmony import */ var _header_styled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header.styled */ "./Containers/header/header.styled.js");
+/* harmony import */ var _utils_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/hooks */ "./utils/hooks.js");
+/* harmony import */ var _Components_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/menu */ "./Components/menu/index.jsx");
+/* harmony import */ var _Components_burger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Components/burger */ "./Components/burger/index.jsx");
+/* harmony import */ var _header_styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header.styled */ "./Containers/header/header.styled.js");
 
 var _jsxFileName = "/Users/alirioangel/desarrollos/repositorios/proyectos_personales/my-portfolio/Containers/header/index.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
 
 
 var Header = function Header(props) {
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1__["useState"](false),
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
       _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$useState, 2),
       open = _React$useState2[0],
       setOpen = _React$useState2[1];
 
+  var node = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
+  Object(_utils_hooks__WEBPACK_IMPORTED_MODULE_2__["useOnClickOutside"])(node, function () {
+    return setOpen(false);
+  });
   var topM = TopMove();
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_4__["BackgroundHeader"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_5__["BackgroundHeader"], {
+    ref: node,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: this
-  }, __jsx(_Components_burger__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_Components_burger__WEBPACK_IMPORTED_MODULE_4__["default"], {
     topM: topM,
     open: open,
     setOpen: setOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: this
-  }), __jsx(_Components_menu__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_Components_menu__WEBPACK_IMPORTED_MODULE_3__["default"], {
     topM: topM,
     open: open,
     setOpen: setOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   })), props.children);
@@ -1379,7 +1405,7 @@ var Header = function Header(props) {
 var TopMove = function TopMove() {
   var client = true;
 
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_1__["useState"](7),
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(7),
       _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$useState3, 2),
       topM = _React$useState4[0],
       setTopM = _React$useState4[1];
@@ -1390,7 +1416,7 @@ var TopMove = function TopMove() {
     setTopM(topm);
   };
 
-  react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
     var body = document.getElementById('__next');
 
     if (client) {
@@ -17247,6 +17273,38 @@ var Home = function Home() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./utils/hooks.js":
+/*!************************!*\
+  !*** ./utils/hooks.js ***!
+  \************************/
+/*! exports provided: useOnClickOutside */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useOnClickOutside", function() { return useOnClickOutside; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var useOnClickOutside = function useOnClickOutside(ref, handler) {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var listener = function listener(event) {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+
+      handler(event);
+    };
+
+    document.addEventListener('mousedown', listener);
+    return function () {
+      document.removeEventListener('mousedown', listener);
+    };
+  }, [ref, handler]);
+};
 
 /***/ }),
 

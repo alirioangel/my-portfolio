@@ -9,7 +9,7 @@ import { Books } from 'styled-icons/icomoon/Books';
 import { Slideshow } from 'styled-icons/remix-fill/Slideshow';
 import { ContactMail } from 'styled-icons/material/ContactMail';
 
-const Menu = ({ open, topM }) => {
+const Menu = ({ open, topM, setOpen }) => {
   return (
     <StyledMenu topM={topM} open={open}>
       <section>
@@ -17,7 +17,7 @@ const Menu = ({ open, topM }) => {
         <h3>Alirio A. Angel A.</h3>
       </section>
       <ul>
-        <li>
+        <li onClick={() => setOpen(!open)}>
           <Link href="#home">
             <span>
               <i>
@@ -27,7 +27,7 @@ const Menu = ({ open, topM }) => {
             </span>
           </Link>
         </li>
-        <li>
+        <li onClick={() => setOpen(!open)}>
           <Link href="#about">
             <span>
               <i>
@@ -37,7 +37,7 @@ const Menu = ({ open, topM }) => {
             </span>
           </Link>
         </li>
-        <li>
+        <li onClick={() => setOpen(!open)}>
           <Link href="#education">
             <span>
               <i>
@@ -47,7 +47,7 @@ const Menu = ({ open, topM }) => {
             </span>
           </Link>
         </li>
-        <li>
+        <li onClick={() => setOpen(!open)}>
           <Link href="#skills">
             <span>
               <i>
@@ -58,7 +58,7 @@ const Menu = ({ open, topM }) => {
           </Link>
         </li>
 
-        <li>
+        <li onClick={() => setOpen(!open)}>
           <Link href="#portfolio">
             <span>
               <i>
@@ -68,7 +68,7 @@ const Menu = ({ open, topM }) => {
             </span>
           </Link>
         </li>
-        <li>
+        <li onClick={() => setOpen(!open)}>
           <Link href="#contact">
             <span>
               <i>

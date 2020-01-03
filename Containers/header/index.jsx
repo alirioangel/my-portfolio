@@ -1,14 +1,17 @@
-import * as React from 'react';
+import React, { useRef } from 'react';
+import { useOnClickOutside } from '../../utils/hooks';
 import Menu from '../../Components/menu';
 import Burger from '../../Components/burger';
 import { BackgroundHeader } from './header.styled';
 
 const Header = props => {
   const [open, setOpen] = React.useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
   const topM = TopMove();
   return (
     <>
-      <BackgroundHeader>
+      <BackgroundHeader ref={node}>
         <Burger topM={topM} open={open} setOpen={setOpen} />
         <Menu topM={topM} open={open} setOpen={setOpen} />
       </BackgroundHeader>
